@@ -1,0 +1,91 @@
+
+<%- include('../partials/header.ejs')%>
+<article class="newTradesMain"  >
+		<div class="newTrades">
+	<h1> Create New Trade</h1>
+			<!-- <div class="container"> -->
+  <form action="/trades"  method = 'POST' >	
+  <div class="eachRow">
+    <div class="firstColumn">
+      <label for="category">Category</label>
+    </div>
+    <div class="secondColumn">
+      <input type="text" id="category" name="category" placeholder="Category" required  oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);" >
+      
+    </div>
+  </div>
+  
+  <div class="eachRow">
+    <div class="firstColumn">
+      <label for="name">Product Name</label>
+    </div>
+    <div class="secondColumn">
+      <input type="text" id="name" name="name" placeholder="Product Name" required> 
+    </div>
+  </div>
+  <div class="eachRow">
+    <div class="firstColumn">
+      <label for="author">Author</label>
+    </div>
+    <div class="secondColumn">
+      <input type="text" id="author" name="author" placeholder="Author" required>
+    </div>
+  </div>
+ 
+   <div class="eachRow">
+    <div class="firstColumn">
+      <label for="cost">Cost</label>
+    </div>
+    <div class="secondColumn">
+      <input type="number" id="cost" name="cost" step ="0.01" placeholder="Cost" required min="0">
+    </div>
+  </div>
+
+
+<div class="eachRow">
+    <div class="firstColumn">
+      <label for="image">image URL</label>
+    </div>
+    <div class="secondColumn">
+      <input type="url" id="image" name="image" placeholder="Image URL" required>
+    </div>
+  </div>
+
+  <div class="eachRow">
+    <div class="firstColumn">
+      <label for="condition">condition</label>
+    </div>
+    <div class="secondColumn">
+      <input type="text" id="condition" name="condition" placeholder="Condition" required>
+    </div>
+  </div>
+
+<div class="eachRow">
+    <div class="firstColumn">
+      <label for="company">company</label>
+    </div>
+    <div class="secondColumn">
+      <input type="text" id="company" name="company" placeholder="Company" required>
+    </div>
+  </div>
+ <div class="eachRow">
+    <div class="firstColumn">
+      <label for="details">Details</label>
+    </div>
+    <div class="secondColumn">
+      <textarea id="details" name="details" placeholder="Product Description" minlength="10" required></textarea>
+    </div>
+  </div>
+  <br>
+  <div class="eachRow">
+    <input type="submit" value="Create Trade"> 
+  </div>
+  </form>
+	</div>
+		
+	</article>
+<br>
+<br>
+<br>
+<%- include('../partials/footer.ejs')%>
+

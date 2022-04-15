@@ -1,0 +1,50 @@
+<%- include('../partials/header.ejs')%>
+<article class="tradesMain" >
+   <% if(categoryNames.length>0){ %>
+   
+    <% categoryNames.forEach(categoryName =>{ %>
+
+           
+                    
+                    <%  if(trades.length) {%>
+                        <h1> <%= categoryName %> </h1>
+                        <div class="headphonesGrid">
+                            <div class="grid-container-headphones">
+                        <% trades.forEach(trade=>{ %>
+                            <% if (trade.category=== categoryName){%>
+                               
+                                
+                                
+                                        <div class="cardView">
+                                            <img src="<%=trade.image %>" alt="<%= trade.name %>" >
+                                            <h1><%= trade.name %></h1>
+                                            <p class="cost">$<%= trade.cost %></p>
+                                            <!-- <p>Some text about the Airpods..</p> -->
+                                            <p class="detailTrade"><a href="/trades/<%= trade._id %>" class="buttonViewDetails" > View Details</a> </p>
+                                        </div>
+                                  
+                            <% } %>
+                        <% });   %>
+                    </div>
+                </div> 
+                        <%} else {%>
+                            <p> No categories Left to Display, Add category using New Trades option</p>
+                    
+                            <%   }%>
+            
+
+                
+        <%}); %>
+
+    <%} else {%>
+        <p> No categories Left to Display, Add category using New Trades option</p>
+
+        <%   }%>
+</article>
+    <%- include('../partials/footer.ejs')%>
+
+
+
+
+
+

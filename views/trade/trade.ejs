@@ -1,0 +1,56 @@
+<%- include('../partials/header.ejs')%>
+<article>
+    <div class="tradeMain">
+
+        <div class="img-details">
+            <div class="tradeImage">
+            <img src="<%= trade.image %>" alt="Product Image">
+            </div>
+            
+            <h2 id="TradeName"> Product Name: <%= trade.name %></h2>
+            <h4> Price : $ <%=trade.cost %></h4>
+            <h4> Condition : <%=trade.condition %></h4>
+            <h4> Category : <%= trade.category %> </h4>
+            
+            <h4> Company : <%= trade.company %> </h4>
+            <h4> Author : <%= trade.author %> created on <%= trade.createdAt %>  </h4>
+            <h4> Last Updated on: <%= trade.updatedAt %></h4>
+            <hr class="hrdesign"> 
+            <div class="detail"> <h1> Details</h1> <p> 
+                <%= trade.details %> 
+            </p></div>
+            <form>
+            <div class="buttonChangeTrade">
+                <button class="buttonEditTrade" type="submit" formmethod="GET" formaction="/trades/<%= trade._id %>/edit">Update</button>
+            
+                <button class="buttonDeleteTrade" type="submit" formmethod="POST" formaction="/trades/<%= trade._id %>?_method=DELETE"> Delete  </button>
+            </div>
+        </form>
+        </div>
+       
+
+        <div class="reviewContents">
+
+            <div class="review"> 
+                Are you interested in the <%= trade.category%> ?
+                <br>
+                <br>
+                <div class="buttonGrid">
+                    <a href="/trades" class="buttonReviewTrade"> Trade it </a>
+                    <a href="/trades" class="buttonReviewRate"> Rate it </a>
+                </div>
+                <br>
+                <br>
+            </div>
+
+            <div class="detail">
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    
+</article>
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,941 @@
+ html,body{
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #F4F5FF;
+font-family: Arial, sans-serif;
+}
+/********************************* Header,Navigation, and Footer common all pages****************************/
+/*for header user Nav , navigation bar site nav*/
+.userNav{
+ padding-top: 5px;
+ height: 60px;
+ display: grid;
+ grid-template-columns: 1fr 5fr;
+}
+ul.siteNav, .userNav ul{
+height: 100%;
+width: 100%;
+list-style-type: none;
+margin: 0;
+padding-left: 2px;
+padding-right: 2px;
+padding-top:0;
+padding-bottom: 0;
+overflow: hidden;
+background-color: #F4F5FF ;
+}
+
+/*making sure userNav is on right side*/
+/*SiteNavigation CSS*/
+ul.siteNav li {float: left;}
+
+ul.siteNav li a, .userNav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  margin-top: 10px;;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+ul.siteNav li a:hover:not(.active) {background-color: black; color:white;}
+
+ul.siteNav li a.active {background-color: black; color: white;}
+
+/*making sure siteNav is on right side to select button*/
+ul.siteNav li.right {float: right;}
+
+/*UserNavigation CSS*/
+.userNav li a:hover:not(.active) {background-color: black; color:white;}
+
+.userNav li a.active {background-color: black; color: white;}
+.userNav li { float:right; }
+
+/*making sure userNav is on left side to select button*/
+.userNav li.left {float: left;}
+.userNav li.logo 
+{
+  float: left;
+}
+
+header{
+  height:60px;
+  padding-bottom: 0;
+}
+/*logo animation and logo attributes*/
+/* .logo{
+  position: absolute;
+  border: 1px solid gray;
+  margin-left: 10px;
+  padding:0;
+  cursor: pointer;
+  width:90px;
+  height: 60px;
+  animation: comeDown 1s linear 1;
+  animation-delay: 0.5s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+
+} */
+
+.logo-image{
+  /* background-color: #000; */
+  width:100px;
+  height:50px;
+  padding:0;
+  margin:0;
+  margin-left: 10px;;
+}
+.userNav li.logo a:hover{background-color: #F4F5FF;}
+
+/*logo animation action keyframe*/
+@keyframes comeDown{
+  0%{
+    transform: translateY(-100px);
+    visibility: visible;
+  }
+  100%{
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+/*footer code: applying css to list similar code as header but with changes*/
+ul.siteFooter {
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top:0;
+  padding-bottom: 0;
+  overflow: hidden;
+  background-color: #F8F6F6;
+}
+
+/*making sure userNav is on right side*/
+ul.siteFooter li {float: left;}
+
+ul.siteFooter li a {
+  display: block;
+  color: black;
+  text-align: center;
+  
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+/*use for copyright design*/
+.copyright p{
+  padding:10px 15px;
+  margin:0;
+}
+ul.siteFooter li a:hover:not(.active) {background-color: black; color:white;}
+
+ul.siteFooter li a.active {background-color: black; color: white;}
+
+footer{
+  position: fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  text-align: center;
+  box-sizing: border-box;
+
+}
+
+/*********************************************Index.html CSS***************************************/
+/*main content area*/
+
+.indexMain{
+  position:  relative;
+  padding: 50px;
+  margin: 0;
+  margin-bottom: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  background-image: url("/images/backGroundwallpaper.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/*to bring the svg down use this class*/
+.svgAnimation{
+  position: relative;
+  margin-top: 12%;
+  margin-left: 0;
+}
+
+svg{
+  font-weight:bold;width:auto;max-height:1800px;
+
+}
+
+@keyframes comeXSide{
+  0%{
+    transform: translateX(-1200px);
+    visibility: visible;
+  }
+  100%{
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+
+.loadingOn{
+ text-anchor: middle;
+ fill-opacity:0.8 ; 
+ animation: comeXSide 1s linear 1;
+ animation-delay: 0.3s;
+ visibility: hidden;
+ animation-fill-mode: forwards;
+ 
+}
+
+.loadingOff{
+ text-anchor: middle;
+ fill-opacity:0.8 ; 
+ animation: comeXSide 1s linear 1;
+ animation-delay: 0.3s;
+ visibility: hidden;
+ animation-fill-mode: forwards;
+ 
+}
+
+.loadingOn1{
+ text-anchor: middle;
+ fill-opacity:0.8 ; 
+ animation: comeXSideOne 1s linear 1;
+ animation-delay: 0.1s;
+ visibility: hidden;
+ animation-fill-mode: forwards;
+
+}
+
+.loadingOff1{
+ text-anchor: middle;
+ fill-opacity:0.5;
+ fill-opacity:0.8 ; 
+ animation: comeXSideOne 1s linear 1;
+ animation-delay: 0.1s;
+ visibility: hidden;
+ animation-fill-mode: forwards;
+}
+@keyframes comeXSideOne{
+  0%{
+    transform: translateX(-1200px);
+    visibility: visible;
+  }
+  100%{
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+
+
+/**************************************Trades.html CSS******************************************/
+/* The CSS of Trades. html*/
+.tradesMain{ 
+  margin-bottom: 10px; 
+  padding-bottom: 100px;
+  align-content: center;
+  text-align: center;
+}
+
+/*grid view headphones*/
+.grid-container-headphones {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+/*grid view laptop*/
+.grid-container-laptop{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/*each card view*/
+.cardView {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+  font-family: arial;
+}
+.cardView img{
+  height: 300px;
+  width:300px;
+}
+.cost {
+  color: grey;
+  font-size: 22px;
+  word-break: break-all;
+}
+
+.cardView a.buttonViewDetails {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.cardView a.buttonViewDetails:hover {
+  opacity: 0.7;
+}
+
+/***************************************************** Trade.html CSS ******************************************************************/
+
+/*trade html css*/
+
+.tradeMain{
+  margin: 0;
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.tradeImage{
+    max-width: 100%;
+  max-height: 100%;
+  display: grid;
+}
+.img-details {
+  max-width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+.img-details img{
+  width: 300px;
+  height: 300px;
+  
+}
+.tradeImage {
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.hrdesign { 
+  height: 30px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+} 
+.hrdesign:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
+.detail{
+  margin:auto;
+  width: 90%;
+  font-size: 18px;
+  max-height: inherit;
+  overflow: hidden;
+}
+.detail h1{
+  font-size: 22px;
+}
+
+.reviewContents{
+  margin: 0px 100px;
+}
+.review{
+  margin: 15px; 
+  padding:20px;
+  height: 100px;
+  font-size: 20px;
+}
+
+.buttonGrid{
+  display: flex;
+  float: left;
+}
+
+.buttonReviewTrade {
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 12px;
+  background-color: #90ee90;
+  color: black;
+  border-radius: 5px;
+}
+
+.buttonReviewTrade:hover {
+  background-color: #555555;
+  color: white;
+  border-radius: 5px;
+}
+
+.buttonReviewRate{
+  margin: auto;
+  padding: 12px;
+  background-color: lightblue;
+  color: black;
+  border-radius: 5px;
+}
+
+.buttonReviewRate:hover {
+  background-color: #555555;
+  color: white;
+  border-radius: 5px;
+}
+
+
+.a {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 40px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+
+.buttonChangeTrade{
+  display: flex;
+  float: right;
+
+}
+
+
+.buttonEditTrade {
+  margin: auto;
+  padding: 12px;
+  background-color:  #00A267 ;
+  color: white;
+  border-radius: 5px;
+  margin-right: 5px;
+
+}
+
+.buttonEditTrade:hover {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+   margin-right: 5px;
+}
+
+.buttonDeleteTrade{
+  margin: auto;
+  padding: 12px;
+  background-color: #FF7F7F ;
+  color: white;
+  border-radius: 5px;
+   margin-left: 5px;
+}
+
+.buttonDeleteTrade:hover {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+
+/*NewTrades Html css*/
+/************************************* NEW Trades.Html CSS ***************************************************/
+/* Taken and referenced from: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_responsive*/
+
+.newTradesMain {
+  box-sizing: border-box;
+  padding: 0%  20%;
+  text-align: left;
+
+}
+.newTrades h1{
+  font-size: 35px;
+  align-content: center;
+  text-align: center;
+}
+input[type=text], select, textarea ,input[type=url],input[type=number] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  float: right;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit]
+{
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover
+{
+  background-color: white;
+  color:black;
+}
+
+
+.firstColumn{
+  float: left;
+  width: 35%;
+  margin-top: 6.5px;
+}
+
+.secondColumn {
+  float: left;
+  width: 65%;
+  margin-top: 6.5px;
+}
+
+/* Clear floats after the columns */
+.eachRow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#details{
+  height:200px;
+}
+
+
+/***********************************************Contact US**************************************************/
+/***********************************************Contact US**************************************************/
+/*https://alvarotrigo.com/blog/css-text-animations/*/
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.correction {
+  color: #333;
+  font-family: tahoma;
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.5;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 650px;
+}
+
+.correction span {
+  font-size: 40px;
+  margin-left: 40px;
+}
+
+.message {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  position: absolute;
+  padding-left: 0.5rem;
+  top: 0.2rem;
+  left: 200px;
+  animation: openclose 5s ease-in-out infinite;
+}
+
+.word1, .word2, .word3 {
+  font-family: tahoma;
+}
+
+@keyframes openclose {
+  0% {
+    top: 0.2rem;
+    width: 0;
+  }
+  5% {
+    width: 0;
+  }
+  15% {
+    width: 280px;
+  }
+  30% {
+    top: 0.2rem;
+    width: 280px;
+  }
+  33% {
+    top: 0.2rem;
+    width: 0;
+  }
+  35% {
+    top: 0.2rem;
+    width: 0;
+  }
+  38% {
+    top: -4.5rem;
+    
+  }
+  48% {
+    top: -4.5rem;
+    width: 330px;
+  }
+  62% {
+    top: -4.5rem;
+    width: 330px;
+  }
+  66% {
+    top: -4.5rem;
+    width: 0;
+    text-indent: 0;
+  }
+  71% {
+    top: -9rem;
+    width: 0;
+    text-indent: 5px;
+  }
+  86% {
+    top: -9rem;
+    width: 360px;
+  }
+  95% {
+    top: -9rem;
+    width: 360px;
+  }
+  98% {
+    top: -9rem;
+    width: 0;
+    text-indent: 5px;
+  }
+  100% {
+    top: 0;
+    width: 0;
+    text-indent: 0;
+  }
+}
+
+
+.contactQuery{
+  margin-top:9%;
+  text-align: center;
+  color: #838383;
+}
+#contact {
+  box-sizing: border-box;
+}
+/*.contactQuery h1{
+  font-size: 30px;
+}
+
+.contactQuery h2{
+  font-size: 25px;
+}*/
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Oswald', sans-serif;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 1040px;
+}
+
+/* Left contact page */
+.form-horizontal {
+  /*float: left;*/
+  max-width: 400px;
+  font-family: 'Lato';
+  font-weight: 400;
+}
+
+
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  /*padding-right: 20px;*/
+  padding:20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color:#696969;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  color:#696969;
+}
+
+.contact-text a:hover {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px black;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,5.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255,255,255,.6);
+}
+
+
+
+
+/***************************About.html********************************/
+
+.about{
+  width: auto;
+  margin:10px;
+  padding:0;
+  font-family: "sans-serif";
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.about-body{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.outer-about{
+background: url("/images/gadgets.jpg");
+background-size: 55%;
+
+overflow: hidden;
+padding: 250px;
+background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+
+
+}
+
+.headerAbout{
+  font-family: system-ui;
+
+  font-size: 38px;
+  text-align: center;
+  
+}
+.text{
+  text-align: center;
+  font-size: 25px;
+}
+
+/* reference code */
+/*https://codepen.io/cmdw/pen/vQqzyB*/
+
+
+.editorial {
+  display: block;
+  width: 100%;
+  height: 60px;
+  max-height: 60px;
+  margin: 0;
+  margin-bottom: 35px;
+  z-index:5;
+  bottom:0;
+  position:absolute;
+  left:0px;
+  float:left;
+}
+
+.parallax1 > use {
+  animation: move-forever1 10s linear infinite;
+  
+}
+.parallax1 > :nth-child(1) {
+  animation-delay: -2s;
+}
+.parallax2 > use {
+  animation: move-forever2 8s linear infinite;
+
+}
+.parallax2 > :nth-child(1) {
+  animation-delay: -2s;
+}
+.parallax3 > use {
+  animation: move-forever3 6s linear infinite;
+
+}
+.parallax3 > :nth-child(1) {
+  animation-delay: -2s;
+}
+.parallax4 > use {
+  animation: move-forever4 4s linear infinite;
+
+}
+
+.parallax4 > :nth-child(1) {
+  animation-delay: -2s;
+}
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+@keyframes move-forever3 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@keyframes move-forever4 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}

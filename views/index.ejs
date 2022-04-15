@@ -1,0 +1,37 @@
+<%- include('./partials/header.ejs') %>
+  
+	<article class="indexMain">
+		<div class="svgAnimation">
+			<!-- SVG that I used in the html is the only way I was able to do it, I was not able to put attributes in css, I already talked to professor she told to put such a note. (index.html) -->
+			
+			<svg viewbox="100 100 270 300">
+				<defs>
+					<linearGradient id="gradient" x1="0" x2="0" y1="10" y2="1">
+						<stop offset="5%" stop-color="#000" />
+						<stop offset="90%" stop-color="#ffffff"/>
+					</linearGradient>
+					<pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+						<path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+							<animateTransform
+							attributeName="transform"
+							begin="0s"
+							dur="1.4s"
+							type="translate"
+							from="0,0"
+							to="40,0"
+							repeatCount="indefinite" />
+						</path>
+					</pattern>
+				</defs>
+				<text class="loadingOn"  x="180" y="115" fill="url(#wave)" >Refurbished Gadgets</text>
+				
+				<text class="loadingOff" x="180" y="115"  fill="url(#gradient)"   >Refurbished Gadgets</text>
+				
+				<text class="loadingOn1"  x="180" y="135" fill="url(#wave)" >We Sell the Value</text>
+				
+				<text class="loadingOff1" x="180" y="135"  fill="url(#gradient)"   >We Sell the Value</text>
+			</svg>
+		</div>
+
+	</article>
+    <%- include('./partials/footer.ejs')%>
