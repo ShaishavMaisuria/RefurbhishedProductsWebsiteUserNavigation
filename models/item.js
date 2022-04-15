@@ -5,7 +5,7 @@ const tradesSchema= new Schema(
     { category: {type:String,required:[true, 'category is required'],sort:{category:1 } },
        
         name: {type:String,required:[true, 'Product name is required']},
-        author:{type:String,required:[true, 'author is required']},
+        author: {type:Schema.Types.ObjectId,ref:'User'},
         cost: {type:String, required:[true, 'cost is required']},
         image: {type:String,required:[true, 'image is required']},
         condition:{type:String,required:[true, 'condition is required']},
@@ -13,7 +13,7 @@ const tradesSchema= new Schema(
         details: {type:String,required:[true, 'content is required'],
             minlength:[10,'the content should have atleast 10 characters']}
     },
-   {timestamps:true}
+    {timestamps:true}
    
 );
     

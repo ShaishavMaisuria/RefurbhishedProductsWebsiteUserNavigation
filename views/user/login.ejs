@@ -1,0 +1,55 @@
+
+<%- include('../partials/header.ejs')%>
+
+
+<article class="loginMain">
+
+    <!-- <form action = '/users/login' method = 'POST'>
+        <table>
+            <tr>
+                <td><label for="email">Email Address</label></td>
+                <td><input type="email" id="email" name="email" class = "fixed-width" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" id="password" name="password" class = "fixed-width" required></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2" class = "align-right"><button>Login</button></td>
+            </tr>
+        </table>        
+    </form> -->
+
+  
+
+    <div class="container" onclick="onclick">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center">
+          <h2>Please Sign In</h2>    
+          <form action = '/users/login' method = 'POST'>
+              <table>
+                  <tr>
+          
+                      <td><input type="email" id="email" name="email" class = "fixed-width" required placeholder="email"></td>
+                  </tr>
+                  <tr>
+                      <td><input type="password" id="password" name="password" class = "fixed-width" required placeholder="password"></td>
+                  </tr>
+                  
+                  <tr>
+                      <td colspan="2"><input type="submit" value="Login"> </td>
+                  </tr>
+              </table>        
+          </form>
+      
+      
+      
+          <h2>&nbsp;</h2>
+        </div>
+      </div>
+</article>
+    <%- include('../partials/footer.ejs')%>
+
+

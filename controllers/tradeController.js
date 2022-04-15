@@ -29,19 +29,13 @@ console.log(trades);
 // Each category trade.html, basically show all the trades inside the list
 exports.showEachTrade=(req,res,next)=>{
     let id = req.params.id;
-      // an objectId is a 24-bit hex string
-      if (!id.match(/^[0-9a-fA-F]{24}$/)){
-        let err = new Error("Invalid Story ID");
-        err.status=400;
-        return next(err);
-
-    }
+ 
     model.findById(id)
     .then(trade=>{
 
         if(trade){
           
-            // console.log("**************************testing value reached");
+            console.log("**************************testing value reached", trade.creadtedAt);
             res.render('./trade/trade',{trade});
             // console.log("trades................"+trade)
             } else{
@@ -61,6 +55,9 @@ exports.create=(req,res,next)=>{
 
     let trade = new model(req.body);
     // console.log("trades*/*/***/**/*/*/*"+trade.category);
+    trade.author = req.session.user;
+    console.log(req.session.user);
+
     trade.save()
     .then(trade=> res.redirect('/trades'))
     .catch(err=>{
@@ -74,12 +71,7 @@ exports.create=(req,res,next)=>{
 // this method is used to edit the object retrived from id and category
 exports.edit=(req,res,next)=>{
     let id = req.params.id;
-    // an objectId is a 24-bit hex string
-    if (!id.match(/^[0-9a-fA-F]{24}$/)){
-      let err = new Error("Invalid Story ID");
-      err.status=400;
-      return next(err);
-  }
+   
   model.findById(id)
   .then(trade=>{
 
@@ -101,13 +93,6 @@ exports.edit=(req,res,next)=>{
 exports.update=(req,res,next)=>{
     let trade = req.body;
     let id = req.params.id;
-    // an objectId is a 24-bit hex string
-    if (!id.match(/^[0-9a-fA-F]{24}$/)){
-      let err = new Error("Invalid Story ID");
-      err.status=400;
-      return next(err);
-
-  }
   model.findByIdAndUpdate(id,trade,{useFindAndModify:false,runValidators:true})
   .then(trade=>{
 
@@ -133,14 +118,7 @@ exports.update=(req,res,next)=>{
 exports.delete=(req,res,next)=>{
 
 
-    let id = req.params.id;
-    // an objectId is a 24-bit hex string
-    if (!id.match(/^[0-9a-fA-F]{24}$/)){
-      let err = new Error("Invalid Story ID");
-      err.status=400;
-      return next(err);
-
-  }
+    let id = req.params.id;  
   model.findByIdAndDelete(id,{useFindAndModify:false})
   .then(trade=>{
 

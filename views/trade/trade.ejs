@@ -13,18 +13,22 @@
             <h4> Category : <%= trade.category %> </h4>
             
             <h4> Company : <%= trade.company %> </h4>
-            <h4> Author : <%= trade.author %> created on <%= trade.createdAt %>  </h4>
+            
             <h4> Last Updated on: <%= trade.updatedAt %></h4>
             <hr class="hrdesign"> 
             <div class="detail"> <h1> Details</h1> <p> 
                 <%= trade.details %> 
             </p></div>
             <form>
+
+               
             <div class="buttonChangeTrade">
                 <button class="buttonEditTrade" type="submit" formmethod="GET" formaction="/trades/<%= trade._id %>/edit">Update</button>
             
                 <button class="buttonDeleteTrade" type="submit" formmethod="POST" formaction="/trades/<%= trade._id %>?_method=DELETE"> Delete  </button>
             </div>
+
+           
         </form>
         </div>
        

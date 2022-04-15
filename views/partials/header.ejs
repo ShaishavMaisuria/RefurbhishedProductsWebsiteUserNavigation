@@ -21,11 +21,12 @@
 
 		</div>
 		<div>
-		<ul >
+		<ul >			
+			<li class="animate"><a href="/users/logout"> Logout  </a> </li>
+			<li class="animate"><a href="/users/profile"> Profile</a></li>
 
-			<li class="animate"><a href="#"> Sign Up  </a> </li>
-
-			<li class="animate"><a href="#"> Log in</a></li>
+			<li class="animate"><a href="/users/new"> Sign Up  </a> </li>
+			<li class="animate"><a href="/users/login"> Log in</a></li>
 			<li class="animate"> <a href="/newTrade">   Create a New Trade </a> </li>
 		</ul>
 		</div>
@@ -43,3 +44,19 @@
 		</div>
 
 	</nav>
+    <% if(errorMessages.length > 0) {%>
+        <% errorMessages.forEach(message=>{%>
+            <div class='error'>
+               <strong>Error!</strong> <%=message%>
+            </div>
+            <%});%>
+                <%}%>
+    
+                    <% if(successMessages.length > 0) {%>
+    
+                        <% successMessages.forEach(message=>{%>
+                            <div class='success'>
+								<strong>Success!</strong>    <%=message%>
+                            </div>
+                            <%});%>
+                                <%}%>
