@@ -1,0 +1,226 @@
+[{
+  "_id": {
+    "$oid": "6259e03b8fb998e8adcf2835"
+  },
+  "category": "HEADPHONES",
+  "name": "Airpods",
+  "cost": "111",
+  "image": "https://m.media-amazon.com/images/I/61+fe8F-vmL._AC_SL1000_.jpg",
+  "condition": "new",
+  "company": "apple",
+  "details": "  This product is used for display and u can trade it or rate it thank u  ",
+  "author": {
+    "$oid": "6259dab421f489dc5484c7cc"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650057275618"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650057382472"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6259e0928fb998e8adcf2843"
+  },
+  "category": "HEADPHONES",
+  "name": "Beats",
+  "cost": "100",
+  "image": "http://localhost:3000/images/beats.png",
+  "condition": "Used",
+  "company": "apple",
+  "details": "This is apple product used for dispaly",
+  "author": {
+    "$oid": "6259dab421f489dc5484c7cc"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650057362679"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650057362679"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625b0ade543f0529f68ecef3"
+  },
+  "category": "LAPTOP",
+  "name": "HP_Pavilion_14",
+  "cost": "999",
+  "image": "https://www.notebookcheck.net/fileadmin/_processed_/c/1/csm_HP_Pavilion_14_WarmGold_LuminousGold_T_HDcam_nonODD_FPR_ScrnSS_Coreset_FrontLeft_f77da26df9.jpg",
+  "condition": "used",
+  "company": "HP",
+  "details": " This is user from the vikram and we can use the elements ",
+  "author": {
+    "$oid": "625b0a48543f0529f68eceed"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650133726791"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650143612167"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625b56e54decce8fb7bdad33"
+  },
+  "category": "HEADPHONES",
+  "name": "Bose Headphones",
+  "cost": "99",
+  "image": "https://cdn2.jazztimes.com/2022/02/bose-700-noise-canceling-headphones-800x640.jpg",
+  "condition": "New",
+  "company": "Bose",
+  "details": "Noise-canceling headphones work by using microphones inside (and sometimes outside) the headphones to pick up noise. The audio signal from these microphones is then reversed in phase, so a positive signal becomes negative and vice versa. This signal is blended with the music, so the headphones produce a phase-reversed version of the noise that cancels out the actual noise.\r\n\r\n",
+  "author": {
+    "$oid": "625b0a48543f0529f68eceed"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650153189625"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650153189625"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625b57bc4decce8fb7bdad39"
+  },
+  "category": "HEADPHONES",
+  "name": "Beats Studio3 Wireless",
+  "cost": "349.95",
+  "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MX3Y2?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1580420157712",
+  "condition": "used",
+  "company": "Beats-Apple",
+  "details": "Beats Studio3 Wireless headphones deliver a premium listening experience with Pure Active Noise Cancelling (Pure ANC). Beats’ Pure ANC actively blocks external noise and uses real-time audio calibration to preserve clarity, range and emotion. They continuously pinpoint external sounds to block while automatically responding to individual fit in real time, optimising sound output to preserve a premium listening experience the way artists intended.",
+  "author": {
+    "$oid": "625b0a48543f0529f68eceed"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650153404592"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650153404592"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625b58974decce8fb7bdad4c"
+  },
+  "category": "LAPTOP",
+  "name": "MacBook Pro",
+  "cost": "1299",
+  "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFjYm9vayUyMHByb3xlbnwwfHwwfHw%3D&w=1000&q=80",
+  "condition": "new",
+  "company": "apple",
+  "details": "The Apple M1 chip gives the 13‑inch MacBook Pro speed and power beyond belief. With up to 2.8x CPU performance. Up to 5x the graphics speed. An advanced Neural Engine for up to 11x faster machine learning. And up to 20 hours of battery life so you can go all day. It’s our most popular pro notebook, taken to a whole new level.",
+  "author": {
+    "$oid": "6259dab421f489dc5484c7cc"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650153623530"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650153623530"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625b59614decce8fb7bdad50"
+  },
+  "category": "LAPTOP",
+  "name": "Surface Laptop Studio",
+  "cost": "1422.99",
+  "image": "https://c.s-microsoft.com/en-us/CMSImages/Surface_F21_DeviceFamily_SLS_V1.jpg?version=0ae6bebe-72a2-17e3-6f25-1c17a7209787",
+  "condition": "new",
+  "company": "Microsoft",
+  "details": "Set your imagination free on the most powerful Surface Laptop, designed to light up the best of Windows 11. Boundary-pushing design lets you flex your creative muscle on the sleek 14.4\"² touchscreen, making seamless transitions from laptop to entertainment-ready stage to portable creative canvas, complete with built-in Slim Pen storage and charging.* Stay in the flow, be inspired, and get closer to what you love.",
+  "author": {
+    "$oid": "6259dab421f489dc5484c7cc"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650153825016"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650153825016"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625b59d14decce8fb7bdad54"
+  },
+  "category": "WATCH",
+  "name": "AppleWatch",
+  "cost": "200",
+  "image": "http://localhost:3000/images/watch.jpg",
+  "condition": "used",
+  "company": "apple",
+  "details": "Track all the ways you move. It's the fitness partner that fits on your wrist. Learn more. Shop Apple Watch Series 7, Apple Watch SE and Apple Watch Series 3.",
+  "author": {
+    "$oid": "6259dab421f489dc5484c7cc"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650153937429"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650153937429"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625b5d3c4decce8fb7bdad7b"
+  },
+  "category": "MOUSE",
+  "name": "Logitech Mouse",
+  "cost": "100",
+  "image": "http://localhost:3000/images/mouse.jpg",
+  "condition": "New",
+  "company": "Logitech",
+  "details": "G502 Wireless is an icon, topping the charts through every generation, and the mouse of choice for serious gamers. Now, G502 joins the ranks of the world's most advanced wireless gaming mice with the release of G502 LIGHTSPEED. LIGHTSPEED is ultra-fast and reliable with performance trusted in competition by esports pros. G502 LIGHTSPEED also features the next-generation HERO 16K sensor and is POWERPLAY compatible. With this complete advanced technology remastering, G502 LIGHTSPEED still retains the same beloved shape—and achieves a 7-gram weight reduction.",
+  "author": {
+    "$oid": "625b0a48543f0529f68eceed"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650154812799"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650154812799"
+    }
+  },
+  "__v": 0
+}]

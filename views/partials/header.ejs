@@ -22,11 +22,13 @@
 		</div>
 		<div>
 		<ul >			
+			<% if(user){%>
 			<li class="animate"><a href="/users/logout"> Logout  </a> </li>
 			<li class="animate"><a href="/users/profile"> Profile</a></li>
-
+			<% }else{%>
 			<li class="animate"><a href="/users/new"> Sign Up  </a> </li>
 			<li class="animate"><a href="/users/login"> Log in</a></li>
+			<%  }%>
 			<li class="animate"> <a href="/newTrade">   Create a New Trade </a> </li>
 		</ul>
 		</div>

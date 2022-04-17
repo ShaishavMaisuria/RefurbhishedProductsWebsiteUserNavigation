@@ -44,9 +44,13 @@ exports.login = (req, res, next)=>{
             user.comparePassword(password)
             .then(result=>{ 
                 if(result) {
-                    req.session.user = user._id;
-                    req.flash('success', 'You have successfully logged in');
-                    res.redirect('/users/profile');
+
+                   
+                        req.session.user = user._id;
+                        req.session.author=user.firstName;
+                        req.flash('success', 'You have successfully logged in', user.firstName , user.lastName);
+                        res.redirect('/users/profile');
+                   
             } else {
                 req.flash('error', 'wrong password');      
                 res.redirect('/users/login');

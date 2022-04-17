@@ -30,7 +30,7 @@ console.log(trades);
 exports.showEachTrade=(req,res,next)=>{
     let id = req.params.id;
  
-    model.findById(id)
+    model.findById(id).populate('author','firstName lastName')
     .then(trade=>{
 
         if(trade){

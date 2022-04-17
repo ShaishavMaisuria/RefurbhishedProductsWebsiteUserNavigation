@@ -1,0 +1,7 @@
+use trade
+
+db.dropDatabase()
+
+use trade
+
+db.createCollection('trades')
