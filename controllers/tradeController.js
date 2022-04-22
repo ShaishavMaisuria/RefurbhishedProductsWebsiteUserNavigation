@@ -59,7 +59,17 @@ exports.create=(req,res,next)=>{
     console.log(req.session.user);
 
     trade.save()
-    .then(trade=> res.redirect('/trades'))
+    .then(trade=> {
+      if (!trade.author) {
+      
+      req.flash('error', 'Unable to create the trade please try different'); 
+      res.redirect('/trades')
+    } else {
+      req.flash('success', 'You have successfully created the trade');
+      res.redirect('/trades')
+
+    }
+    })
     .catch(err=>{
 
         if (err.name==="ValidationError"){
@@ -97,6 +107,8 @@ exports.update=(req,res,next)=>{
   .then(trade=>{
 
       if(trade){
+        req.flash('success', 'Your trade has successfully Updated');  
+        
         res.redirect('/trades/'+id);
           // console.log("trades................"+trade)
           } else{
@@ -123,7 +135,10 @@ exports.delete=(req,res,next)=>{
   .then(trade=>{
 
       if(trade){
+        req.flash('success', 'Your trade has successfully deleted');  
+        
         res.redirect('/trades');
+           
           // console.log("trades................"+trade)
           } else{
             let err = new Error('Cannot find a trade with id '+id);

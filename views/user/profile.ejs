@@ -12,14 +12,10 @@
                                  <div class="grid-container-headphones">
                              <% trades.forEach(trade=>{ %>
                                  <% if (trade.category=== categoryName){%>
-                                    
-                                     
-                                     
                                              <div class="cardView">
                                                  <img src="<%=trade.image %>" alt="<%= trade.name %>" >
                                                  <h1><%= trade.name %></h1>
                                                  <p class="cost">$<%= trade.cost %></p>
-                                                 <!-- <p>Some text about the Airpods..</p> -->
                                                  <p class="detailTrade"><a href="/trades/<%= trade._id %>" class="buttonViewDetails" > View Details</a> </p>
                                              </div>
                                        
